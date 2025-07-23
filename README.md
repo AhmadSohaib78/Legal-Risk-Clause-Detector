@@ -17,11 +17,18 @@ The system extracts clauses from uploaded contracts, encodes them using Sentence
 
 ## Modules
 
-| Module | Description |
-|--------|-------------|
-| Module 6 | Extract clauses from uploaded contracts. |
-| Module 7 | Perform AI-based universal risk detection using sentence embeddings. |
-| Module 8 | Apply rule-based detection against predefined risky clauses. |
+| Module     | Description |
+|------------|-------------|
+| Module 1   | Initialize UI and necessary configurations. |
+| Module 2   | Load uploaded contract file (PDF). |
+| Module 3   | Extract text content from the PDF. |
+| Module 4   | Preprocess and segment text into individual clauses. |
+| Module 5   | Load Sentence-BERT model (all-MiniLM-L6-v2) for embeddings. |
+| Module 6   | Generate embeddings for each clause in the contract. |
+| Module 7   | Compare embeddings with a universal threshold for risk detection. |
+| Module 8   | Rule-based matching with known risky clause patterns. |
+| Module 9   | Log and display flagged clauses along with similarity scores. |
+| Module 10  | Optional enhancements such as filtering, exporting results, or UI styling. |
 
 ## Technical Details
 
@@ -39,9 +46,9 @@ The system extracts clauses from uploaded contracts, encodes them using Sentence
 
 ## Output
 
-- Prints and/or stores a list of risky clauses.
-- Provides a similarity score and matched pattern for each flagged clause.
-- Optionally logs all analysis steps for audit purposes.
+- Displays a list of risky clauses from the uploaded document.
+- Provides similarity scores and matched pattern details.
+- Supports logging for review and audit trails.
 
 ## Setup and Usage
 
